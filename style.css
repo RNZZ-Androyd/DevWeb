@@ -1,0 +1,146 @@
+:root {
+    --cor-principal: #ff0055; /* Vermelho neon */
+    --cor-fundo: #0e0e0e; /* Preto fosco */
+    --cor-texto: #fff; /* Branco */
+    --cor-fundo-codigo: #2a2a2a; /* Fundo do código */
+    --cor-sombra: rgba(255, 0, 85, 0.5); /* Sombra neon */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+nav {
+    background: var(--cor-fundo);
+    box-shadow: 0 2px 10px var(--cor-sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e6004d; /* Vermelho neon mais escuro ao passar o mouse */
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(255, 0, 85, 0.7), rgba(0, 0, 0, 0.7));
+    animation: fadeIn 1.5s ease-in;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--cor-principal);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e6004d; /* Vermelho neon mais escuro ao passar o mouse */
+}
+
+.section {
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.code-sample {
+    background: var(--cor-fundo-codigo);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    color: var(--cor-texto);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: var(--cor-fundo);
+    box-shadow: 0 -2px 10px var(--cor-sombra);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid var(--cor-principal);
+    border-radius: 5px;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+button {
+    cursor: pointer;
+    background: var(--cor-principal);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e6004d; /* Vermelho neon mais escuro ao passar o mouse */
+}
